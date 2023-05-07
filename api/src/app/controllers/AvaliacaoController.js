@@ -20,7 +20,7 @@ class AvaliacaoController {
       id_cliente, id_produto, pontuacao, comentario,
     });
 
-    response.json(avaliacao);
+    response.status(201).json(avaliacao);
   }
 
   async update(request, response) { // Editar uma avaliação

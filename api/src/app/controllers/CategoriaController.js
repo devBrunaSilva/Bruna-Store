@@ -47,7 +47,7 @@ class CategoriaController {
     }
     const categoria = await CategoriasRepository.create({ name });
 
-    response.json(categoria);
+    response.status(201).json(categoria);
   }
 
   async update(request, response) { // Editar uma categoria

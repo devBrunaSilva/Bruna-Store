@@ -85,7 +85,7 @@ class ClienteController {
       const cliente = await ClientesRepository.create({
         nome, endereco, telefone, email,
       });
-      response.json(cliente);
+      response.status(201).json(cliente);
     }
   }
 

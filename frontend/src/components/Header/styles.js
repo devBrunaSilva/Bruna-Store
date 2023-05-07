@@ -7,7 +7,6 @@ export const Container = styled.header`
   flex-direction: column;
   text-align: center;
 
-
   h1 {
     font-family: 'Sacramento', cursive;
     font-size: 64px;

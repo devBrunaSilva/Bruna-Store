@@ -81,7 +81,7 @@ class ProdutoController {
       id_categoria,
     });
 
-    response.json(produto);
+    response.status(201).json(produto);
   }
 
   async update(request, response) { // Editar um produto

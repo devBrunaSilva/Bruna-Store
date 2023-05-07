@@ -53,7 +53,7 @@ class PedidoController {
       itens_pedido.push(item_pedido);
     }));
 
-    response.json({ pedido, itens_pedido });
+    response.status(201).json({ pedido, itens_pedido });
   }
 }
 

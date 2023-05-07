@@ -24,6 +24,9 @@ export default function ClientForm({ buttomLabel }) {
     errors,
   } = useErrors();
 
+  const isFormValid = nome && errors.length === 0;
+  // console.log(isFormValid);
+
   const handleNomeChange = (event) => {
     setNome(event.target.value);
 
@@ -36,6 +39,7 @@ export default function ClientForm({ buttomLabel }) {
 
   const handleEnderecoChange = (event) => {
     setEndereco(event.target.value);
+    console.log(event.target.value);
   };
 
   const handleTelefoneChange = (event) => {
@@ -52,7 +56,6 @@ export default function ClientForm({ buttomLabel }) {
     }
   };
 
-  const isFormValid = (nome && errors.length === 0);
   const handleSubmit = (event) => {
     event.preventDefault();
     // console.log({
@@ -103,7 +106,10 @@ export default function ClientForm({ buttomLabel }) {
       </FormGroup>
 
       <ButtonContainer>
-        <Button type="submit" disabled={!isFormValid}>
+        <Button
+          type="submit"
+          disabled={!isFormValid}
+        >
           {buttomLabel}
         </Button>
       </ButtonContainer>
